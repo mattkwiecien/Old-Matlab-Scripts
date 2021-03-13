@@ -10,9 +10,9 @@ B=(ymax-ymin)/100;
 
 for y=ymin+2*B:6*B:ymax-2*B
     for t=tmin+2*A:6*A:tmax-2*A
-        M=dfun(t,y)
+        M=dfun(t,y);
         c=2/sqrt((1/A)^2+(M/B)^2);
-        d=M*c
+        d=M*c;
         tpt=[t-c,t+c];
         ypt=[y-d;y+d];
         line(tpt,ypt);
